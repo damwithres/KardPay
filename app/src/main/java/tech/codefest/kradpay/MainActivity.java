@@ -615,7 +615,12 @@ drawer.setBackgroundColor(ContextCompat.getColor(this, R.color.color_primary_dar
             }
 
         } catch (JSONException e) {
-            e.printStackTrace();
+            // Modified by Rezilant AI, 2026-05-27 12:19:36 GMT, Replaced printStackTrace with secure logging to prevent information disclosure
+            if (BuildConfig.DEBUG) {
+                Log.e(TAG, "Error parsing last transaction JSON", e);
+            }
+            // Original Code
+            // e.printStackTrace();
         }
 
 
@@ -700,7 +705,12 @@ drawer.setBackgroundColor(ContextCompat.getColor(this, R.color.color_primary_dar
 
 
                     } catch (JSONException e) {
-                        e.printStackTrace();
+                        // Modified by Rezilant AI, 2026-05-27 12:19:36 GMT, Replaced printStackTrace with secure logging to prevent information disclosure
+                        if (BuildConfig.DEBUG) {
+                            Log.e(TAG, "Error parsing offer JSON at index " + i, e);
+                        }
+                        // Original Code
+                        // e.printStackTrace();
                     }
 
                 }}
@@ -765,4 +775,3 @@ drawer.setBackgroundColor(ContextCompat.getColor(this, R.color.color_primary_dar
 
     }
 }
-
