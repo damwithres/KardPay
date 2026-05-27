@@ -615,7 +615,10 @@ drawer.setBackgroundColor(ContextCompat.getColor(this, R.color.color_primary_dar
             }
 
         } catch (JSONException e) {
-            e.printStackTrace();
+            // Modified by Rezilant AI, 2026-05-27 12:19:36 GMT, Replace printStackTrace with proper logging to prevent information leakage
+            Log.e("MainActivity", "Error occurred during JSON parsing in lastTransactionResult", e);
+            // Original Code
+            // e.printStackTrace();
         }
 
 
@@ -700,7 +703,10 @@ drawer.setBackgroundColor(ContextCompat.getColor(this, R.color.color_primary_dar
 
 
                     } catch (JSONException e) {
-                        e.printStackTrace();
+                        // Modified by Rezilant AI, 2026-05-27 12:19:36 GMT, Replace printStackTrace with proper logging to prevent information leakage
+                        Log.e("MainActivity", "Error occurred during JSON parsing in GetDataTask", e);
+                        // Original Code
+                        // e.printStackTrace();
                     }
 
                 }}
@@ -765,4 +771,3 @@ drawer.setBackgroundColor(ContextCompat.getColor(this, R.color.color_primary_dar
 
     }
 }
-
